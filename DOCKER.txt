@@ -1,0 +1,17 @@
+INSTRUKCJA URUCHOMIENIA BAZY DANYCH (Docker)
+
+Aby aplikacja działała poprawnie, należy uruchomić kontener z bazą danych MongoDB.
+
+1. Pobierz obraz bazy danych:
+   docker pull mongo
+
+2. Uruchom kontener za pomocą poniższej komendy:
+   docker run -d --name mongo-db-wydarzenia -p 27017:27017 mongo
+
+3. Opis parametrów:
+   - Port zewnętrzny: 27017 (na tym porcie łączy się aplikacja Node.js).
+   - Port wewnętrzny kontenera: 27017.
+   - Nazwa kontenera: mongo-db-wydarzenia.
+   - Dane logowania: brak.
+
+Po wykonaniu tych komend projekt automatycznie połączy się z bazą danych pod adresem mongodb://localhost:27017.
