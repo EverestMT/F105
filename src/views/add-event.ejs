@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Dodaj Wydarzenie</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <nav><a href="/">⬅ Powrót</a></nav>
+    <h1>Dodaj nowe wydarzenie</h1>
+
+    <form action="/event/add" method="POST">
+        <label>Tytuł:</label><br>
+        <input type="text" name="title" required><br><br>
+
+        <label>Data:</label><br>
+        <input type="datetime-local" name="date" required><br><br>
+
+        <label>Kategoria:</label><br>
+        <input type="text" name="category" required><br><br>
+
+        <label>Opis:</label><br>
+        <textarea name="description"></textarea><br><br>
+
+        <button type="submit">Zapisz wydarzenie</button>
+    </form>
+</body>
+</html>

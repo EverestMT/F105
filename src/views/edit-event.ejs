@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Edytuj Wydarzenie</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <nav><a href="/event/<%= event._id %>">⬅ Anuluj</a></nav>
+    <h1>Edytuj: <%= event.title %></h1>
+
+    <form action="/event/<%= event._id %>/edit" method="POST">
+        <label>Tytuł:</label><br>
+        <input type="text" name="title" value="<%= event.title %>" required><br><br>
+
+        <label>Kategoria:</label><br>
+        <input type="text" name="category" value="<%= event.category %>" required><br><br>
+
+        <label>Opis:</label><br>
+        <textarea name="description"><%= event.description %></textarea><br><br>
+
+        <button type="submit">Aktualizuj dane</button>
+    </form>
+</body>
+</html>

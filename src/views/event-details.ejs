@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title><%= event.title %></title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <nav><a href="/">⬅ Powrót do listy</a></nav>
+
+    <h1><%= event.title %></h1>
+    <p><strong>Kategoria:</strong> <%= event.category %></p>
+    <p><strong>Data:</strong> <%= event.date.toLocaleString() %></p>
+    <p><strong>Opis:</strong> <%= event.description %></p>
+
+    <hr>
+    <a href="/event/<%= event._id %>/edit">Edytuj wydarzenie</a>
+    
+    <form action="/event/<%= event._id %>/delete" method="POST" style="margin-top: 10px;">
+        <button type="submit" onclick="return confirm('Na pewno usunąć?')">Usuń wydarzenie</button>
+    </form>
+</body>
+</html>

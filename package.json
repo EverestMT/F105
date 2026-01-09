@@ -1,0 +1,20 @@
+{
+  "name": "projekt-zarzadzanie-wydarzeniami",
+  "version": "1.0.0",
+  "description": "Aplikacja służąca do zarządzania podanymi przez użytkownika wydarzeniami",
+  "license": "MIT",
+  "author": "Adam Faber",
+  "type": "commonjs",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
+  },
+  "dependencies": {
+    "bcrypt": "^6.0.0",
+    "ejs": "^3.1.10",
+    "express": "^5.2.1",
+    "mongoose": "^9.1.2",
+    "nodemon": "^3.1.11"
+  }
+}

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Lista Wydarzeń</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <nav>
+        <a href="/">Strona Główna</a> | 
+        <a href="/event/add">Dodaj Wydarzenie</a>
+    </nav>
+
+    <h1>Wydarzenia</h1>
+
+    <section>
+        <form action="/" method="GET">
+            <input type="text" name="category" placeholder="Kategoria (np. Koncert)" value="">
+            <select name="sortBy">
+                <option value="title">Sortuj po kategorii</option>
+                <option value="date">Sortuj po dacie</option>
+            </select>
+            <button type="submit">Zastosuj</button>
+        </form>
+    </section>
+
+    <hr>
+
+    <ul>
+        <% events.forEach(event => { %>
+            <li>
+                <strong><%= event.title %></strong> (<%= event.category %>) - <%= event.date.toDateString() %>
+                <a href="/event/<%= event.id %>">Szczegóły</a>
+            </li>
+        <% }) %>
+    </ul>
+</body>
+</html>
